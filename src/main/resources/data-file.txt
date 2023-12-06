@@ -1,0 +1,8 @@
+user1:{"id": 1, "name": "Emmy Hug", "email": "emmy.by@example.com"}
+user2:{"id": 2, "name": "Billy Yang", "email": "bill.y@example.com"}
+
+event1:{"id": 1, "name": "Concert", "location": "Concert Plaza"}
+event2:{"id": 2, "name": "You have a talent", "location": "Main City Square"}
+
+ticket1:{"id": 1, "userId": 1, "eventId": 1, "seat": 96}
+ticket2:{"id": 2, "userId": 2, "eventId": 2, "seat": 83}
