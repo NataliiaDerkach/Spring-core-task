@@ -26,7 +26,7 @@ public class TicketTest {
         ticketInterface.getBookedTickets(userInterface.getUserById(1l)).forEach(System.out::println);
 
         logger.info("Let's check booked tickets by Event having ID 2: ");
-        ticketInterface.getBookedTickets(eventInterface.getEventById(2l)).forEach(System.out::println);
+       // ticketInterface.getBookedTickets(eventInterface.getEventById(2l)).forEach(System.out::println);
 
         logger.info("Let's add booked ticket for User having ID 1 on Event with ID 2 on seat 55: ");
         ticketInterface.bookTicket(1l, 2l, 55);

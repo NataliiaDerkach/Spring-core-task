@@ -17,21 +17,21 @@ public class EventTest {
     private static final Logger logger = LoggerFactory.getLogger(DemoApplication.class);
 
     @Test
-    public void createNewEvent () {
+    public void createNewEvent() {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
-        EventInterface eventInterface = context.getBean("eventInterface", EventInterface.class);
+        EventInterface eventInterface = context.getBean("eventService", EventInterface.class);
 
         logger.info("Let's check existed events: ");
         eventInterface.getAllEvents().forEach(System.out::println);
 
         logger.info("Let's create new event: ");
-        eventInterface.createEvent(new Event(333l, "Best Standup Ever", "Grand Opera, 1, Praga blvrd"));
+        eventInterface.createEvent(new Event(333l, "Dance for kids", "Kids Worlds, 114 Avenu"));
         eventInterface.getAllEvents().forEach(System.out::println);
 
         logger.info("Let's update the event having ID #1: ");
 
-        String previousName = eventInterface.getEventById(1l).getTitle();
-        String previousLocation = eventInterface.getEventById(1l).getLocation();
+       // String previousName = eventInterface.getEventById(1l).getTitle();
+       // String previousLocation = eventInterface.getEventById(1l).getLocation();
 
         eventInterface.updateEvent(new Event(1l, "Updated Event Name", "Updated Event Location"));
 

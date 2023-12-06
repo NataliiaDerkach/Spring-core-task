@@ -15,7 +15,7 @@ public class Event {
     private String title;
     private String location;
 
-    public Event(long id, String title, String date) {
+    public Event(long id, String title, String location) {
         this.id = id;
         this.title = title;
         this.location = location;
